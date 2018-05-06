@@ -50,13 +50,13 @@
 //
 // Steppers
 //
-#define X_STEP_PIN         25
-#define X_DIR_PIN          23
-#define X_ENABLE_PIN       27
+#define X_STEP_PIN         32
+#define X_DIR_PIN          33
+#define X_ENABLE_PIN       31
 
-#define Y_STEP_PIN         32
-#define Y_DIR_PIN          33
-#define Y_ENABLE_PIN       31
+#define Y_STEP_PIN         25
+#define Y_DIR_PIN          23
+#define Y_ENABLE_PIN       27
 
 #define Z_STEP_PIN         35
 #define Z_DIR_PIN          36

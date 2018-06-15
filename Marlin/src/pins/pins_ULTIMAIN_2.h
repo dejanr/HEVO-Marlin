@@ -62,13 +62,13 @@
 #define Z_DIR_PIN          36
 #define Z_ENABLE_PIN       34
 
-#define E0_STEP_PIN        42
-#define E0_DIR_PIN         43
-#define E0_ENABLE_PIN      37
+#define E0_STEP_PIN        49
+#define E0_DIR_PIN         47
+#define E0_ENABLE_PIN      48
 
-#define E1_STEP_PIN        49
-#define E1_DIR_PIN         47
-#define E1_ENABLE_PIN      48
+#define E1_STEP_PIN        42
+#define E1_DIR_PIN         43
+#define E1_ENABLE_PIN      37
 
 #define MOTOR_CURRENT_PWM_XY_PIN 44
 #define MOTOR_CURRENT_PWM_Z_PIN 45
@@ -77,7 +77,7 @@
 #ifndef MOTOR_CURRENT_PWM_RANGE
   #define MOTOR_CURRENT_PWM_RANGE 2000
 #endif
-#define DEFAULT_PWM_MOTOR_CURRENT  {1300, 1300, 1250}
+#define DEFAULT_PWM_MOTOR_CURRENT  {1100, 1100, 500}
 
 //
 // Temperature Sensors
@@ -90,17 +90,17 @@
 // Heaters / Fans
 //
 #define HEATER_0_PIN        2
-#define HEATER_1_PIN        3
+#define HEATER_1_PIN        8
 #define HEATER_BED_PIN      4
 
-#define FAN_PIN             7
+#define FAN_PIN             3
 
 //
 // Misc. Functions
 //
 #define SDSS               53
 #define SD_DETECT_PIN      39
-#define LED_PIN             8
+#define LED_PIN             7
 #define SAFETY_TRIGGERED_PIN     28   // PIN to detect the safety circuit has triggered
 #define MAIN_VOLTAGE_MEASURE_PIN 14   // ANALOG PIN to measure the main voltage, with a 100k - 4k7 resitor divider.
 

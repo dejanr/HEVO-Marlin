@@ -508,7 +508,7 @@
 #define USE_ZMIN_PLUG
 #define USE_XMAX_PLUG
 //#define USE_YMAX_PLUG
-//#define USE_ZMAX_PLUG
+#define USE_ZMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
 #define ENDSTOPPULLUPS
@@ -574,14 +574,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 5470.479, 418.5 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 200, 418.5 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 300, 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -842,7 +842,7 @@
 // :[-1,1]
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
-#define Z_HOME_DIR -1
+#define Z_HOME_DIR 1
 
 // @section machine
 
@@ -853,10 +853,10 @@
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -5
 #define Y_MIN_POS -5
-#define Z_MIN_POS 0
+#define Z_MIN_POS -10
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 190
+#define Z_MAX_POS 169.00
 
 /**
  * Software Endstops
@@ -1113,13 +1113,13 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 4)    // X point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 4)    // Y point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_X_POINT 30    // X point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_Y_POINT 30    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (14*60)
-#define HOMING_FEEDRATE_Z  (3*60)
+#define HOMING_FEEDRATE_XY (15*60)
+#define HOMING_FEEDRATE_Z  (30*60)
 
 // @section calibrate
 
